@@ -1,0 +1,17 @@
+<kendo-grid [kendoGridBinding]="studentData" [filterable]="true">
+
+<kendo-grid-column field="name" title=" Name">
+    <ng-template kendoGridFilterCellTemplate let-filter let-column="column">
+        <kendo-grid-string-filter-cell [column]="column" [filter]="filter" operator="startswith">
+            <kendo-filter-startswith-operator></kendo-filter-startswith-operator>
+            <kendo-filter-eq-operator></kendo-filter-eq-operator>
+        </kendo-grid-string-filter-cell>
+    </ng-template>
+</kendo-grid-column>
+
+   
+    <kendo-grid-column field="age" title="Age"> </kendo-grid-column>
+    <kendo-grid-column field="hobbies" title="Hobbies"> </kendo-grid-column>
+</kendo-grid>
+ 
+ 
